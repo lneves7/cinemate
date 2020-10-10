@@ -1,0 +1,57 @@
+.App-container {
+  background-color: #fff9f9;
+  min-height: 100vh;
+}
+
+/* ----------------- AJUSTES PARA O MATERIALIZE ----------*/
+nav {
+  background-color: #FFF !important;
+  box-shadow: 0px 3px 6px #00000045;
+  height: 64px !important;
+}
+
+nav .nav-wrapper{
+  padding-top: 5px;
+}
+
+.btn, .btn-large, .btn-small{
+  background-color: #32a865;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover{
+  background-color: #265753 !important;
+}
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 10%;
+  left:40%;  
+}
+
+.link{
+  text-decoration: underline;
+}
+
+/*----------------- Cores de fontes----------------------- */
+.darktxt {  color: #265753 !important; }
+
+
+/* ------------------------Tamanhos de fontes --------------*/
+.s12{ font-size: 12px;  }
+.s13{ font-size: 13px;  }
+.s14{ font-size: 14px;  }
+.s15{ font-size: 15px;  }
+.s16{ font-size: 16px;  }
+.s17{ font-size: 17px;  }
+.s18{ font-size: 18px;  }
+.s19{ font-size: 19px;  }
+.s20{ font-size: 20px;  }
+
+.f600{  font-weight: 600; }
+
+/* ----------- SOMBRA ---------------*/
+.s-cinemate {    box-shadow: 0px 0px 12px #3edd82; }
