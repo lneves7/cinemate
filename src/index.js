@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
-import 'materialize-css/dist/css/materialize.min.css';
-import 'materialize-css/dist/js/materialize.min.js';
+import 'materialize-css/dist/css/materialize.css';
+import 'materialize-css/dist/js/materialize.js';
 import 'animate.css';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';

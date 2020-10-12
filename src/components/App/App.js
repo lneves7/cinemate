@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Icon, Navbar, NavItem } from 'react-materialize';
 import SearchContainer from '../SearchContainer/SearchContainer';
 import './App.css';
@@ -28,7 +28,7 @@ function App() {
           alignLinks="right" 
           centerLogo 
           brand={
-            <img className="brand-logo" height="55px" src={logo} alt="logo"></img>
+            <img className="brand-logo click" height="55px" src={logo} alt="logo"></img>
             } 
           id="nav">
           <NavItem onClick={() => setViewMode('favorites')} className="darktxt">

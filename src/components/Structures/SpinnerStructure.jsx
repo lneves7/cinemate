@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Preloader } from 'react-materialize';
+import { Preloader, Modal } from 'react-materialize';
 
 const SpinnerContainer = styled.div`
-    padding: 10px;
+    ${props => props.modal && 'padding: 10px; '}
     ${props => props.labelInline && 'display: inline'}
 `;
 
@@ -18,7 +18,7 @@ const SpinnerLabelContainer = styled.div`
 
 const SpinnerStructure = props => {
 
-    return (
+    const spinner = (
         <div>
             <SpinnerContainer labelInline={props.labelInline}>
                 <Preloader 
@@ -35,9 +35,33 @@ const SpinnerStructure = props => {
         </div>
     )
 
+    return (
+        props.modal ? (
+            <Modal
+                className="preloader-modal"
+                open={true}
+                actions={null}
+                options={{
+                    dismissible: false,
+                    inDuration: 250,
+                    outDuration: 250,
+                    opacity: 0.5,
+                    preventScrolling: false,
+                    startingTop: '35%',
+                    endingTop: '40%'
+                }}
+                root={props.modalRoot && props.modalRoot.current}>
+                {spinner}
+            </Modal>
+        ) : (
+            spinner
+        )
+    )
+
 }
 
 SpinnerStructure.propTypes = {
+    modal: PropTypes.bool,
     size: PropTypes.string.isRequired,
     active: PropTypes.bool.isRequired,
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),

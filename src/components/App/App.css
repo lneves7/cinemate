@@ -10,9 +10,7 @@ nav {
   height: 64px !important;
 }
 
-nav .nav-wrapper{
-  padding-top: 5px;
-}
+nav .nav-wrapper{ padding-top: 5px; }
 
 .btn, .btn-large, .btn-small{
   background-color: #32a865;
@@ -21,9 +19,9 @@ nav .nav-wrapper{
   font-weight: 600;
 }
 
-.btn:hover, .btn-large:hover, .btn-small:hover{
-  background-color: #265753 !important;
-}
+.btn:hover, .btn-large:hover, .btn-small:hover{   background-color: #265753 !important  }
+
+.btn-flat{  font-weight: 500  }
 
 #toast-container {
   top: auto !important;
@@ -32,26 +30,60 @@ nav .nav-wrapper{
   left:40%;  
 }
 
-.link{
-  text-decoration: underline;
+.link{  text-decoration: underline }
+
+.material-icons{
+  margin-right: 6px;
+  margin-left: 6px;
+}
+.card-content{  padding: 15px   }
+.click {   cursor: pointer   }
+
+.pagination li a {
+  font-size: 20px;
+}
+.pagination li i {  
+  color: #009688; 
+  font-size: 35px;
+  font-weight: 700;
+}
+.pagination li.active { background-color: #32a865 }
+.pagination li.disabled i {  color:grey !important;  }
+
+.modal.preloader-modal{
+  width: 30%;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.modal.preloader-modal .modal-footer{
+  display: none !important;
+}
+.modal.preloader-modal h4 {
+  display: none !important;
 }
 
 /*----------------- Cores de fontes----------------------- */
 .darktxt {  color: #265753 !important; }
 
-
 /* ------------------------Tamanhos de fontes --------------*/
-.s12{ font-size: 12px;  }
-.s13{ font-size: 13px;  }
-.s14{ font-size: 14px;  }
-.s15{ font-size: 15px;  }
-.s16{ font-size: 16px;  }
-.s17{ font-size: 17px;  }
-.s18{ font-size: 18px;  }
-.s19{ font-size: 19px;  }
-.s20{ font-size: 20px;  }
+.s12{ font-size: 12px !important;  }
+.s13{ font-size: 13px !important;  }
+.s14{ font-size: 14px !important;  }
+.s15{ font-size: 15px !important;  }
+.s16{ font-size: 16px !important;  }
+.s17{ font-size: 17px !important;  }
+.s18{ font-size: 18px !important;  }
+.s19{ font-size: 19px !important;  }
+.s20{ font-size: 20px !important;  }
 
 .f600{  font-weight: 600; }
 
 /* ----------- SOMBRA ---------------*/
 .s-cinemate {    box-shadow: 0px 0px 12px #3edd82; }
+
+/*------------- PADDINGS -----------*/
+.pad0 {  padding: 0px !important;}
+.pad1 { padding: 1rem;}
+.pad1_5 { padding: 1.5rem;}
+.pad2 { padding: 2rem;}

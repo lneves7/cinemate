@@ -27,7 +27,9 @@ const SearchContainer = (props) => {
             {props.searchRx.results && 
                 <Row>
                     <SearchResultsContainer s={12} className="animate__animated animate__fadeIn">
-                        <SearchResults results={props.searchRx.results.Search}/>
+                        <SearchResults 
+                            searchRx={props.searchRx} 
+                            favouritesRx={props.favouritesRx}/>
                     </SearchResultsContainer>                    
                 </Row>
             }
@@ -38,7 +40,8 @@ const SearchContainer = (props) => {
 }
 
 const mapStateToProps = state => ({
-    searchRx: state.search
+    searchRx: state.search,
+    favouritesRx: state.favourites.movies
 })
 
 export default connect(mapStateToProps)(SearchContainer);

@@ -44,6 +44,7 @@ const Search = (props) => {
         MovieApi().fetchMovies(query)
             .then(response => {
                 if(response.data.Response !== "False"){
+                    response.data.query = query;
                     Store.dispatch(changeSearchResults(response.data));
                 } else {
                     M.toast({

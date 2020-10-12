@@ -1,8 +1,10 @@
+import favouritesReducer from "./ducks/favourites";
+import searchReducer from './ducks/search';
 const { combineReducers } = require("redux");
-const { default: searchReducer } = require("./ducks/search");
 
 const rootReducer = combineReducers({
-    search: searchReducer
+    search: searchReducer,
+    favourites: favouritesReducer
 })
 
 export default rootReducer;
