@@ -11,7 +11,7 @@ import PaginationStructure from '../Structures/PaginationStructure';
 import SpinnerStructure from '../Structures/SpinnerStructure';
 import MovieApi from '../../api/MovieApi';
 
-const StyledMovieCol = styled(Col)`
+export const StyledMovieCol = styled(Col)`
     float: none !important;
     display: inline-block;
     text-align: start !important;
@@ -51,10 +51,12 @@ const SearchResults = props => {
         <div>
             <SearchResultsHeader 
                 searchRx={props.searchRx} />
-            <PaginationStructure 
-                activePage={props.searchRx.activePage}
-                pageCount={pageCount}
-                selectCallback={(page) => fetchSearchPage(page)}/>
+            {pageCount > 1 &&
+                <PaginationStructure 
+                    activePage={props.searchRx.activePage}
+                    pageCount={pageCount}
+                    selectCallback={(page) => fetchSearchPage(page)}/>
+            }
             <Row>
                 {props.searchRx.results.Search.map((movie, index) => 
                     <React.Fragment key={`movie-${index}`}>
@@ -77,10 +79,12 @@ const SearchResults = props => {
                     </React.Fragment>
                 )}
             </Row>
-            <PaginationStructure 
-                activePage={props.searchRx.activePage}
-                pageCount={pageCount}
-                selectCallback={(page) => fetchSearchPage(page)}/>
+            {pageCount > 1 &&
+                <PaginationStructure 
+                    activePage={props.searchRx.activePage}
+                    pageCount={pageCount}
+                    selectCallback={(page) => fetchSearchPage(page)}/>
+            }
             {pageLoader && 
                 <SpinnerStructure active modal size="big"/>
             }

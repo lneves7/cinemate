@@ -12,7 +12,7 @@ export const setActivePage = payload => ({type: SET_ACTIVE_PAGE, payload})
  * ----------------------------- INIT STATE
  */
 const INITIAL_STATE = {
-    results: JSON.parse(localStorage.getItem('teste')),
+    results: false,
     activePage: 1
 }
 

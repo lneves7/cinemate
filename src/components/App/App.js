@@ -7,6 +7,7 @@ import SearchContainer from '../SearchContainer/SearchContainer';
 import MovieContainer from '../MovieContainer/MovieContainer';
 import '../../assets/css/App.css';
 import logo from '../../assets/img/logo.svg';
+import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
 
 const App = props => {
 
@@ -14,10 +15,13 @@ const App = props => {
     switch(props.viewModeRx){
       case VIEW_MODE_SEARCH:
         return <SearchContainer />
+
       case VIEW_MODE_FAVOURITES:
-        return <h1>Modo favoritos!</h1> 
+        return <FavouritesContainer />
+
       case VIEW_MODE_MOVIE:
         return <MovieContainer />
+
       default: 
         return <div/>
     }
@@ -43,7 +47,7 @@ const App = props => {
           } 
           id="nav">
           <NavItem onClick={() => changeViewMode(VIEW_MODE_FAVOURITES)} className="darktxt">
-            <Icon left> favorite </Icon>
+            <Icon left> loyalty </Icon>
               Meus Favoritos
           </NavItem>
           <NavItem className="darktxt">

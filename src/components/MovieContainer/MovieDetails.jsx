@@ -5,6 +5,7 @@ import { Col, Collection, CollectionItem, MediaBox, Row } from 'react-materializ
 import SpinnerStructure from '../Structures/SpinnerStructure';
 import MovieDetailsHeader from './MovieDetailsHeader';
 import MovieDetailsRating from './MovieDetailsRating';
+import posterPlaceholder from '../../assets/img/film-poster-placeholder.png'
 
 const detailsOrder = [
     {field: 'Director', label: 'Diretor(es)'},
@@ -44,7 +45,7 @@ const MovieDetails = props => {
                 <Row>
                     <Col m={4} l={3} s={12} className="animate__animated animate__fadeInLeft">
                         <MediaBox options={{ inDuration: 275, outDuration: 200 }}>
-                            <img alt="Poster" src={movieData.Poster} width="100%"/>
+                            <img alt="Poster" src={(!movieData.Poster || movieData.Poster === 'N/A') ? posterPlaceholder: movieData.Poster } width="100%"/>
                         </MediaBox>
                     </Col>
                     <Col m={8} l={9} s={12} className="animate__animated animate__fadeInRight">
