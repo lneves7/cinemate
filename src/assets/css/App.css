@@ -63,6 +63,16 @@ nav .nav-wrapper{ padding-top: 5px; }
   display: none !important;
 }
 
+.collection-header h4{
+  font-size: 1.5rem;
+  line-height: 110%;
+  margin: 1.2rem 0 1rem 0;
+}
+
+.rating{
+  margin-left: 10px;
+}
+
 /*----------------- Cores de fontes----------------------- */
 .darktxt {  color: #265753 !important; }
 
@@ -78,12 +88,13 @@ nav .nav-wrapper{ padding-top: 5px; }
 .s20{ font-size: 20px !important;  }
 
 .f600{  font-weight: 600; }
-
+.f700{  font-weight: 700; }
 /* ----------- SOMBRA ---------------*/
 .s-cinemate {    box-shadow: 0px 0px 12px #3edd82; }
 
-/*------------- PADDINGS -----------*/
+/*------------- PADDINGS E MARGENS -----------*/
 .pad0 {  padding: 0px !important;}
-.pad1 { padding: 1rem;}
-.pad1_5 { padding: 1.5rem;}
-.pad2 { padding: 2rem;}
+.pad1 { padding: 1rem !important}
+.pad1_5 { padding: 1.5rem !important}
+.pad2 { padding: 2rem !important}
+.mb0   { margin-bottom: 0px !important;}

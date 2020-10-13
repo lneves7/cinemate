@@ -9,7 +9,7 @@ const SearchResultsHeader = props => {
     return (
         <Row>
             <Col m={10} s={12}>
-                <h5 className="teal-text teal-darken-4">
+                <h5 className="teal-text text-darken-4">
                     <Icon> movie </Icon>
                     {props.searchRx.results.totalResults} resultados encontrados para "{props.searchRx.results.query}"
                 </h5>

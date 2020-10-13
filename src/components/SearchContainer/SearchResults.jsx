@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Col, Row } from 'react-materialize';
@@ -21,7 +21,6 @@ const StyledMovieCol = styled(Col)`
 const SearchResults = props => {
 
     const [pageLoader, setPageLoader] = useState(false);
-    const containerRef = useRef();
 
     //? Indicador do total de páginas
     const pageCount = Math.ceil(Number(props.searchRx.results.totalResults) / 10);
@@ -49,7 +48,7 @@ const SearchResults = props => {
     };
 
     return (
-        <div ref={containerRef}>
+        <div>
             <SearchResultsHeader 
                 searchRx={props.searchRx} />
             <PaginationStructure 

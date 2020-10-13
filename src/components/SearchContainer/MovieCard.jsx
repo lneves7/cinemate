@@ -6,6 +6,7 @@ import { Store } from '../../store';
 import { addFavourite, removeFavourite } from '../../store/reducers/ducks/favourites';
 import posterPlaceholder from '../../assets/img/film-poster-placeholder.png'
 import M from 'materialize-css';
+import { setMovieMode } from '../../store/reducers/ducks/viewMode';
 
 const StyledMovieCard = styled(Card)`
     box-shadow: 0px 0px 6px #0000007d;
@@ -24,13 +25,27 @@ const StyledFavouriteButton = styled(Button)`
 
     &:hover{
         background-color:#32a865;
-        color: white !important;
+        color: #fff !important;
     }
 
     i { font-size: 25px }
 
     @media(max-width: 992px) {
         i { font-size: 4rem }
+    }
+`;
+
+const MovieDetailsLink = styled.span`
+    font-size: 17px;
+    color: #265753;
+    text-decoration: underline;
+    padding: 5px;
+    border-radius: 5px;
+    cursor:pointer;
+
+    &:hover{
+        background-color:#32a865;
+        color: #fff !important;
     }
 `;
 
@@ -59,14 +74,14 @@ const MovieCard = props => {
                 header={ <CardTitle image={imageSrc}></CardTitle> }>
                 <Row>
                     <Col s={12} className="s17 f600">
-                    {`${props.movie.Title} (${props.movie.Year})`}
+                        {`${props.movie.Title} (${props.movie.Year})`}
                     </Col>
                 </Row>
                 <Row>
                     <Col s={9}>
-                        <a className="darktxt link s17">
+                        <MovieDetailsLink onClick={() => Store.dispatch(setMovieMode(props.movie.imdbID))}>
                             Ver detalhes
-                        </a>
+                        </MovieDetailsLink>
                     </Col>
                     <Col s={3} className="pad0">
                         <StyledFavouriteButton 

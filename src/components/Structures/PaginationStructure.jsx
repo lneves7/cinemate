@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Col, Icon, Pagination, Row } from 'react-materialize';
+import { Col, Pagination, Row } from 'react-materialize';
 
 const PaginationStructure = props => {
 
