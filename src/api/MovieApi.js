@@ -1,3 +1,5 @@
+import { Store } from "../store";
+import { setActivePage } from "../store/reducers/ducks/search";
 const { default: Axios } = require("axios")
 
 const MovieApi = () => {
@@ -9,7 +11,10 @@ const MovieApi = () => {
         timeout: 60000
     });
 
-    const fetchMovies = (query, page = 1) => {
+    const fetchMovies = (query, page) => {
+        if(!page)
+            Store.dispatch(setActivePage(1));
+            
         return instance.get('', { params: {
             apikey: API_KEY,
             s : query.trim(),

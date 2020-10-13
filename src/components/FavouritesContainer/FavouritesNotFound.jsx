@@ -10,7 +10,7 @@ const FavouritesNotFound = () => {
                 Vazio! Nenhum filme adicionado nos seus favoritos até o momento...
             </span>
             <div className="pad1">
-                <img src={favIcon} className="grey-text text-lighten-1" height="60px"/>
+                <img alt="icon" src={favIcon} className="grey-text text-lighten-1" height="60px"/>
             </div>
         </Col>
     )

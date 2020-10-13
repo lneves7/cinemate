@@ -18,8 +18,7 @@ const FavouritesList = props => {
 
     //? Paginação Fx
     useEffect(() => {
-        setFavItems([...
-            props.favouritesRx.slice(
+        setFavItems([...props.favouritesRx.slice(
                 (((activePage - 1) * 10)), 
                 ((10 * activePage ))
             )

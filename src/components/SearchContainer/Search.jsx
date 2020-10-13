@@ -7,6 +7,7 @@ import { Store } from '../../store';
 import { changeSearchResults } from '../../store/reducers/ducks/search';
 import SpinnerStructure from '../Structures/SpinnerStructure';
 import M from 'materialize-css';
+import { addHistory } from '../../store/reducers/ducks/history';
 
 const SearchCard = styled.div`
     ${props => props.hasResults ? 'margin-top: 2vh;' : 'margin-top: 20vh;'}
@@ -46,6 +47,7 @@ const Search = (props) => {
                 if(response.data.Response !== "False"){
                     response.data.query = query;
                     Store.dispatch(changeSearchResults(response.data));
+                    Store.dispatch(addHistory({query: query, totalResults: response.data.totalResults}));
                 } else {
                     M.toast({
                         html: 'Opa! Parece que não encontramos nenhum resultado para a sua busca!',

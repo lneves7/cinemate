@@ -8,6 +8,7 @@ import MovieContainer from '../MovieContainer/MovieContainer';
 import '../../assets/css/App.css';
 import logo from '../../assets/img/logo.svg';
 import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
+import HistoryModal from '../History/HistoryModal';
 
 const App = props => {
 
@@ -39,21 +40,23 @@ const App = props => {
           centerLogo 
           brand={
             <img 
-              onClick={() => changeViewMode(VIEW_MODE_SEARCH)} 
+              onClick={() => window.location = ''} 
               className="brand-logo click" 
               height="55px" 
               src={logo} 
-              alt="logo"></img>
+              alt="logo"/>
           } 
           id="nav">
           <NavItem onClick={() => changeViewMode(VIEW_MODE_FAVOURITES)} className="darktxt">
             <Icon left> loyalty </Icon>
               Meus Favoritos
           </NavItem>
-          <NavItem className="darktxt">
-            <Icon left> history </Icon>
-              Histórico de Pesquisa
-          </NavItem>
+          <HistoryModal>
+            <NavItem className="darktxt">
+              <Icon left> history </Icon>
+                Histórico de Pesquisa
+            </NavItem>
+          </HistoryModal>
         </Navbar>
       </header> 
       {getAppContent()}
